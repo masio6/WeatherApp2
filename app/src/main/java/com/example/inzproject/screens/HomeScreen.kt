@@ -43,22 +43,16 @@ fun HomeScreen(
     viewModel: WeatherViewModel = hiltViewModel(),
 ) {
 
-
-
-    (println("twoj viewmodel"))
-    println(viewModel)
-
-
-
-
-
-
     lateinit var permissionLauncher: ActivityResultLauncher<Array<String>>
     var selectedDay by remember { mutableStateOf(0) }
 
     val context = LocalContext.current
    // val newLocationTracker = LocationTracker()
     //viewModel.updateParams(newRepository, newLocationTracker, newCityName)
+
+    LaunchedEffect(key1 = Unit) {
+        viewModel.loadWeatherInfo(context = context, "London", selectedDay)
+    }
 
 
     Box(
@@ -68,7 +62,7 @@ fun HomeScreen(
     ) {
 
 //viewModel.fetchDataFromApi(10.1,20.4)
-        viewModel.loadWeatherInfo(context = context, "London", selectedDay)
+
 
     }
 
