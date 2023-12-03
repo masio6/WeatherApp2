@@ -31,7 +31,6 @@ fun MapScreen(
 
         GoogleMap(
             modifier = Modifier
-                .padding(it)
                 .fillMaxSize(),
             cameraPositionState = cameraPositionState,
             properties = viewModel.state.properties,
