@@ -10,14 +10,14 @@ import com.example.inzproject.viewmodels.WeatherViewModel
 import dagger.hilt.android.HiltAndroidApp
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
-@HiltViewModel
-class MainViewModel() : ViewModel() {
 
-    val mapViewModel = MapViewModel()
-val weatherViewModel = WeatherViewModel()
+@HiltViewModel
+class MainViewModel @Inject constructor() : ViewModel() {
+
 
 
     // Pozostała część kodu...
 }
+
 @HiltAndroidApp
 class WeatherApp: Application()

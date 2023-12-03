@@ -24,6 +24,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.inzproject.R
@@ -38,17 +39,9 @@ import java.util.*
 //import kotlin.coroutines.jvm.internal.CompletedContinuation.context
 
 @Composable
-fun HomeScreen(viewModel: WeatherViewModel) {
-
-
-
-    (println("twoj viewmodel"))
-    println(viewModel)
-
-
-
-
-
+fun HomeScreen(
+    viewModel: WeatherViewModel = hiltViewModel(),
+) {
 
     lateinit var permissionLauncher: ActivityResultLauncher<Array<String>>
     var selectedDay by remember { mutableStateOf(0) }
@@ -56,6 +49,10 @@ fun HomeScreen(viewModel: WeatherViewModel) {
     val context = LocalContext.current
    // val newLocationTracker = LocationTracker()
     //viewModel.updateParams(newRepository, newLocationTracker, newCityName)
+
+    LaunchedEffect(key1 = Unit) {
+        viewModel.loadWeatherInfo(context = context, "London", selectedDay)
+    }
 
 
     Box(
@@ -65,7 +62,7 @@ fun HomeScreen(viewModel: WeatherViewModel) {
     ) {
 
 //viewModel.fetchDataFromApi(10.1,20.4)
-        viewModel.loadWeatherInfo(context = context, "London", selectedDay)
+
 
     }
 
