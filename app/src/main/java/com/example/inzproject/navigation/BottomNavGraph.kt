@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -19,13 +20,13 @@ import com.example.inzproject.viewmodels.WeatherViewModel
 
 @Composable
 fun BottomNavGraph(navHostController: NavHostController) {
-    val mainViewModel : MainViewModel = viewModel()
+    val mainViewModel : MainViewModel = hiltViewModel()
 //val weatherViewModel: WeatherViewModel = viewModel()
     NavHost(navController = navHostController, startDestination = BottomRoutes.Home.route) {
         composable(route = BottomRoutes.Home.route) {
            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
 
-                HomeScreen(mainViewModel.weatherViewModel)
+                HomeScreen()
            //
 
            }
@@ -42,7 +43,7 @@ fun BottomNavGraph(navHostController: NavHostController) {
                 modifier = Modifier
                     .fillMaxSize()
             ) {
-                MapScreen(mainViewModel.mapViewModel)
+                MapScreen()
             }
         }
 

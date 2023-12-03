@@ -24,6 +24,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.inzproject.R
@@ -38,7 +39,9 @@ import java.util.*
 //import kotlin.coroutines.jvm.internal.CompletedContinuation.context
 
 @Composable
-fun HomeScreen(viewModel: WeatherViewModel) {
+fun HomeScreen(
+    viewModel: WeatherViewModel = hiltViewModel(),
+) {
 
 
 

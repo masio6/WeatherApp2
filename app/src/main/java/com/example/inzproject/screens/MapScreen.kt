@@ -1,11 +1,13 @@
 package com.example.inzproject.screens
 
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SearchBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.inzproject.components.MapSearchBar
 import com.example.inzproject.viewmodels.MapViewModel
@@ -18,7 +20,7 @@ import com.google.maps.android.compose.rememberCameraPositionState
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MapScreen(
-    viewModel : MapViewModel = viewModel()
+    viewModel : MapViewModel = hiltViewModel(),
 ) {
     Scaffold(
         topBar = { MapSearchBar() }
@@ -29,6 +31,7 @@ fun MapScreen(
 
         GoogleMap(
             modifier = Modifier
+                .padding(it)
                 .fillMaxSize(),
             cameraPositionState = cameraPositionState,
             properties = viewModel.state.properties,

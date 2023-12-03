@@ -23,17 +23,11 @@ import javax.inject.Inject
 
 @HiltViewModel
 class WeatherViewModel @Inject constructor(
-   private var repository: WeatherRepository?,
-    private var locationTracker: LocationTracker?,
-   var cityName: String = "London"
+    private var repository: WeatherRepository,
+    private var locationTracker: LocationTracker,
 ): ViewModel() {
 
-
-
-   constructor() : this(null,null) {
-        // Initialization logic for the secondary constructor goes here
-    }
-
+    var cityName: String = "London"
 
     //  Function to update parameters after construction
 
