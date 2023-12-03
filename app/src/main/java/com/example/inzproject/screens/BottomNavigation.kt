@@ -33,6 +33,7 @@ import com.example.inzproject.helpfunctions.createGradientBrush
 import com.example.inzproject.navigation.BottomNavGraph
 import com.example.inzproject.navigation.BottomRoutes
 import com.example.inzproject.navigation.Routes
+import com.example.inzproject.viewmodels.WeatherViewModel
 
 @Composable
 fun BottomNavigation() {

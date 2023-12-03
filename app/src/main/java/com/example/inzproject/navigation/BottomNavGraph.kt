@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -11,18 +12,23 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.inzproject.screens.CompassScreen
+import com.example.inzproject.screens.HomeScreen
 import com.example.inzproject.screens.MapScreen
 import com.example.inzproject.viewmodels.MainViewModel
+import com.example.inzproject.viewmodels.WeatherViewModel
 
 @Composable
 fun BottomNavGraph(navHostController: NavHostController) {
     val mainViewModel : MainViewModel = viewModel()
-
+//val weatherViewModel: WeatherViewModel = viewModel()
     NavHost(navController = navHostController, startDestination = BottomRoutes.Home.route) {
         composable(route = BottomRoutes.Home.route) {
-            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                Text(text = "HOME")
-            }
+           Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+
+                HomeScreen(mainViewModel.weatherViewModel)
+           //
+
+           }
         }
 
         composable(route = BottomRoutes.LikeToVisit.route) {
@@ -56,3 +62,8 @@ fun BottomNavGraph(navHostController: NavHostController) {
         }
     }
 }
+
+
+
+
+

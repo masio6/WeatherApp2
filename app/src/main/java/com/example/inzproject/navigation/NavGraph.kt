@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.inzproject.screens.AnimatedSplashScreen
 import com.example.inzproject.screens.BottomNavigation
+import com.example.inzproject.viewmodels.WeatherViewModel
 
 @Composable
 fun NavGraph(navHostController: NavHostController) {
