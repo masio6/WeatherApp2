@@ -1,4 +1,5 @@
 Wymagania:
+
 Z racji, że nasza aplikacja pobiera praktycznie wszystkie informacje ze zdalnych
 API, konieczne jest w większości modułów, by użytkownik miał dostęp do internetu
 na urządzeniu mobilnym. W naszym programie istnieją elementy niewymagające
@@ -85,29 +86,57 @@ Aby zawęzić wyszukiwanie, użytkownik może skorzystać z filtrów dostępnych
 
 ![image](https://github.com/user-attachments/assets/d31ccdc1-ac05-4dee-88ba-4da97b3895a1)
 
+![image](https://github.com/user-attachments/assets/1fb15abb-2eb5-4403-b753-dac3a371b468)
+
+
 Ulubione miejsca
 
 Użytkownik ma możliwość zapisania swoich ulubionych miejsc. Aby dodać miejsce do listy ulubionych, wystarczy kliknąć ikonę serca na karcie wybranej lokalizacji. Po zapisaniu ikona zmieni się na wypełnione serce. Listę ulubionych miejsc można znaleźć w zakładce "Ulubione", gdzie są one przechowywane nawet bez dostępu do internetu. Usunięcie miejsca z listy odbywa się poprzez ponowne kliknięcie w ikonę serca.
 
+![image](https://github.com/user-attachments/assets/9b91f43c-439e-4d1a-9fe5-4e7751b5a54a)
+
+
+
 Aby uzyskać więcej informacji o danej lokalizacji, użytkownik może kliknąć przycisk odwołania, który przeniesie go do szczegółowych danych w Google.
+
+![image](https://github.com/user-attachments/assets/bd88ed2b-bb9a-4e45-a09e-cddb160c11cf)
+
 
 Nawigacja i funkcje mapy w aplikacji
 
 Po wciśnięciu przycisku przenosimy się do wyszukiwarki, w której otwiera się odnośnik do Google Maps dla wskazanego miejsca. Możemy tam wyznaczyć trasę do wybranego obiektu, sprawdzić godziny otwarcia, opinie oraz galerie zdjęć. Aby powrócić do aplikacji, należy wybrać jej okno na panelu kart.
 
+![image](https://github.com/user-attachments/assets/97953bcb-9a64-4a86-94e5-d8eb3b9a44dd)
+
+
 Sprawdzanie pogody na mapie
 
 Aby sprawdzić pogodę na mapie, należy przejść do modułu mapy, klikając ikonę kuli ziemskiej na pasku nawigacji. Po wyświetleniu mapy wystarczy dotknąć dowolnego miejsca, aby pojawiły się trzy markery obrazujące pogodę dla danej lokalizacji. Wraz z przesuwaniem i skalowaniem mapy zmienia się położenie markerów.
 
+![image](https://github.com/user-attachments/assets/c084e408-9409-4d5d-aefa-118adb46f0a1)
+
+
 Lokalizację można również wyszukać, wpisując jej nazwę w polu tekstowym i klikając ikonę lupy. Wyszukiwania są zapisywane w historii modułu i filtrowane, co umożliwia łatwe ponowne wyszukiwanie.
+
+![image](https://github.com/user-attachments/assets/1146678f-6d9f-4516-a843-71f1f59f02a4)
+
 
 Dodawanie miejsc specjalnych
 
 Klikając i przytrzymując palec na mapie, pojawia się znacznik z plusem oraz interfejs do dodania miejsca specjalnego (np. dom, praca). Znaczniki te służą do szybkiej nawigacji. W prawym dolnym rogu znajduje się przycisk otwierający menu nawigacji, gdzie można wybrać zapisane lokalizacje.
 
+![image](https://github.com/user-attachments/assets/48fa2953-036f-4f2e-aecf-c4b271ed541e)
+
+
 Dodane miejsca można również usunąć, klikając je na mapie.
+
+![image](https://github.com/user-attachments/assets/12a753cd-f4a6-4721-9cbc-1fc4c23b25ec)
+
 
 Kompas i orientacja w terenie
 
 Aplikacja posiada także kompas, który umożliwia wyznaczanie kierunków świata oraz orientację w terenie względem południka magnetycznego.
+
+![image](https://github.com/user-attachments/assets/a2cf2251-a40d-430e-9dae-6aca6b5572b0)
+
 
